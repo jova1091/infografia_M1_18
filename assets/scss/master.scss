@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/** Variables de fuente **/
+$font-family: 'Poppins',sans-serif;
+$font-size: 1em;
+
+/** Varables de color **/
+$negro: #272b31;
+$blanco: #ffffff;
+$rojo: #e7514f;
+$azul: #5F9EB5;
+$amarillo: #fd893b;
+
+/** Estilos Generales **/
+* {
+    z-index: 1;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $negro;
+}
+
+hr {
+    background-color: $negro;
+    opacity: 1;
+    height: 2px !important;
+}
+
+h3 {
+    color: $azul;
+    font-weight: 700;
+}
+
+.black {
+    color: $negro;
+    font-weight: 700
+}
+
+.hide {
+    opacity: 0;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.img-fluid {
+    min-width: 100%;
+}
+
+.text-color-red {
+    color: $rojo;
+}
+
+.text-color-blue {
+    color: $azul;
+}
+
+.text-color-orange {
+    color: $amarillo;
+}
+
+/** Estilos Banner **/
+.banner-text {
+    position: relative;
+    height: 200px;
+
+    img {
+        height: 100%;
+    }
+
+    p {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: calc(2em + 1vw);
+        color: $blanco;
+    }
+}
+
+/** Estilos particulas **/
+#particles-js {
+    position: relative;
+
+    img,
+    svg {
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+    }
+}
+
+canvas.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+/** Estilos Contenedor **/
+.content-bck {
+    background-image: url('../img/fondo.png');
+    background-repeat: repeat;
+    background-color: $blanco;
+    animation: bck-animated 100s linear infinite;
+}
+
+@keyframes bck-animated {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 2219px;
+    }
+}
+
+/** Estilos para nota **/
+.nota {
+    border-radius: 30px;
+    background-color: $azul;
+    color: $blanco;
+}
+
+/** Estilos para viñetas **/
+.vineta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $rojo;
+    color: $blanco;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+@media (max-width: 566px) {
+    .banner-text {
+        height: auto;
+        p {
+            font-size: calc(1.5em + 1vw);
+        }
+    }
+}
