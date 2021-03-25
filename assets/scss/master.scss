@@ -34,6 +34,10 @@ h3 {
     font-weight: 700;
 }
 
+.flex-md-row {
+    flex-direction: row !important;
+}
+
 .black {
     color: $negro;
     font-weight: 700
@@ -143,10 +147,17 @@ canvas.particles-js-canvas-el {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: $rojo;
     color: $blanco;
     font-weight: 700;
     font-size: 1.5em;
+    
+    &.rojo {
+        background-color: $rojo;
+    }
+    
+    &.naranja {
+        background-color: $amarillo;
+    }
 }
 
 @media (max-width: 566px) {
@@ -155,5 +166,9 @@ canvas.particles-js-canvas-el {
         p {
             font-size: calc(1.5em + 1vw);
         }
+    }
+
+    .flex-sm-column-reverse{
+        flex-direction: column-reverse !important;
     }
 }
